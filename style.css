@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+/* Variables */
+/* Dark Mode*/
 :root {
   --text-color: #fff;
   --bg-img: url(assets/bg-mobile.jpg);
@@ -14,7 +16,7 @@
   --social-hover: rgba(255, 255, 255, 0.2);
   --switch-icon: url(assets/MoonStars.svg);
 }
-
+/* Light Mode */
 .lightmode {
   --text-color: #000;
   --bg-img: url(assets/bg-mobile-light.jpg);
@@ -26,12 +28,6 @@
 }
 
 body {
-  /*
-  background-image: url(assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
   background: var(--bg-img) no-repeat top center/cover;
   transition: background 0.2s;
   height: 100%;
@@ -42,12 +38,14 @@ body * {
   color: var(--text-color);
 }
 
+/* Content Box */
 #container {
   width: 100%;
   max-width: 360px;
   margin: 56px auto 0px;
 }
 
+/* Profile */
 #profile {
   text-align: center;
   padding: 24px;
@@ -63,6 +61,7 @@ body * {
   margin-top: 8px;
 }
 
+/* Dark Mode Switch */
 #switch {
   position: relative;
   width: 64px;
@@ -99,9 +98,9 @@ body * {
   height: 24px;
   background: var(--button-fill);
   border: 1px solid var(--button-stroke);
-  backdrop-filter: blur(4px);
   /* Compatibilidade com navegadores antigos */
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
 
@@ -135,6 +134,7 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
+/* Social Links */
 #social {
   padding: 24px 24px;
   display: flex;
@@ -158,6 +158,7 @@ ul li a:hover {
   background-color: var(--social-hover);
 }
 
+/* Footer */
 footer {
   padding: 24px;
   font-weight: 400;
@@ -169,7 +170,6 @@ footer a {
 }
 
 /* Media Queries */
-
 /* Background change on device viewport size */
 @media (min-width: 700px) {
   :root {
@@ -179,7 +179,6 @@ footer a {
     --bg-img: url(assets/bg-desktop-light.jpg);
   }
 }
-
 /* Switch Animations */
 @keyframes switch-right {
   from {
@@ -189,7 +188,6 @@ footer a {
     left: 50%;
   }
 }
-
 @keyframes switch-left {
   from {
     left: 50%;
