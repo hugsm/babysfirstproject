@@ -175,7 +175,7 @@ footer a {
   :root {
     --bg-url: url(assets/bg-desktop.jpg);
   }
-  .light {
+  .lightmode {
     --bg-url: url(assets/bg-desktop-light.jpg);
   }
 }
