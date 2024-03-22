@@ -33,6 +33,7 @@ body {
   background-size: cover;
   */
   background: var(--bg-img) no-repeat top center/cover;
+  transition: background 0.2s;
   height: 100vh;
 }
 
@@ -79,11 +80,17 @@ body * {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  animation: switch-left ease-in-out 0.2s;
+  outline: 0px solid var(--social-hover);
 }
 
 .lightmode #switch button {
-  right: 0;
-  left: initial;
+  animation: switch-right ease-in-out 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--social-hover);
+  transition: outline 0.2s;
 }
 
 #switch span {
@@ -170,5 +177,24 @@ footer a {
   }
   .light {
     --bg-url: url(assets/bg-desktop-light.jpg);
+  }
+}
+
+/* Switch Animations */
+@keyframes switch-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes switch-left {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
